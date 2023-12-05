@@ -3,8 +3,11 @@
 namespace advent_2023;
 
 // Note: I stripped 'Card ###: ' from the input   
-public class Day4 : Day
+public partial class Day4 : Day
 {
+    private const string Pipe = " | ";
+    private const string Space = " ";
+    
     public Day4(string filename) : base(filename)
     {
     }
@@ -59,16 +62,19 @@ public class Day4 : Day
     private static (string[], string[]) GetWinnersAndCard(string line)
     {
         // Clean up the line
-        var fixedLine = Regex.Replace(line, @"\s+", " ");
+        var fixedLine = Int().Replace(line, Space);
         
-        var winners = fixedLine.Split(" | ")[0]
+        var winners = fixedLine.Split(Pipe)[0]
             .Trim()
-            .Split(" ");
+            .Split(Space);
     
-        var card = fixedLine.Split(" | ")[1]
+        var card = fixedLine.Split(Pipe)[1]
             .Trim()
-            .Split(" ");
+            .Split(Space);
 
         return (winners, card);
     }
+
+    [GeneratedRegex(@"\s+")]
+    private static partial Regex Int();
 }
