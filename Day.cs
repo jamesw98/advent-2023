@@ -2,10 +2,11 @@
 
 public class Day
 {
-    protected string[] Lines;
+    protected readonly string[] Lines;
+    protected const string Base = @"F:\dev\advent-2023\inputs\";
 
     protected Day(string filename)
     {
-        Lines = File.ReadAllLines($@"F:\dev\advent-2023\inputs\{filename}");
+        Lines = File.ReadAllLines($"{Base}{filename}");
     }
 }
