@@ -1,8 +1,8 @@
 ﻿namespace advent_2023;
 
-public class Template : Day
+public class Day7 : Day
 {
-    public Template(string filename) : base(filename)
+    public Day7(string filename) : base(filename)
     {
     }
 
@@ -17,12 +17,12 @@ public class Template : Day
         // var result = 1;
         var result = 0; 
         
-        foreach (var line in Lines)
+        Lines.Each((line, index) =>
         {
             
-        }
+        });
         
-        return result;
+        return -1;
     }
 
     private long Part2()
@@ -30,11 +30,11 @@ public class Template : Day
         // var result = 1;
         var result = 0; 
         
-        foreach (var line in Lines)
+        Lines.Each((line, index) =>
         {
             
-        }
+        });
         
-        return result;
+        return -1;
     }
 }
