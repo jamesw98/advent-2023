@@ -1,4 +1,4 @@
 ﻿using advent_2023;
 
-var d = new Day8("day8.txt");
+var d = new Day9("day9.txt");
 d.Solve();
